@@ -26,12 +26,12 @@
 		</plugins>
 	</build>
 	
-	
+<!--	
   <repositories>
     <repository>
-      <id>maven-group</id>
-      <url>http://192.168.15.31:8081/repository/maven-group/</url>
+      <id>maven-repo</id>
+      <url>http://192.168.15.31:8081/repository/maven-repo/</url>
     </repository>
   </repositories>
-	
+	-->
 </project>
