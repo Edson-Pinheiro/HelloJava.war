@@ -7,6 +7,13 @@
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
+	
+	<repositories>
+   		<repository>
+      			<id>maven-repo</id>
+      			<url>http://192.168.15.31:8081/repository/maven-repo/</url>
+    		</repository>
+  	</repositories>
 
 	<build>
 		<plugins>
