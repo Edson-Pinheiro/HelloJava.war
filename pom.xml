@@ -39,6 +39,24 @@
           						</authentication>
        					</configuration>
       			</plugin>
+			
+			
+<plugin>
+      <groupId>plugins</groupId>
+      <artifactId>maven-clean-plugin</artifactId>
+      <version>2.4.1</version>
+      <executions>
+        <execution>
+          <phase>clean</phase>
+          <goals>
+            <goal>clean</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+			
+			
+			
 	<plugin>
         <groupId>plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
