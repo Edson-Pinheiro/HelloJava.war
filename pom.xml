@@ -8,23 +8,11 @@
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
 	
-	<repositories>
-   		<repository>
-      			<id>maven-repo</id>
-      			<url>http://192.168.15.31:8081/repository/maven-repo/</url>
-    		</repository>
-  	</repositories>
+
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>8.1.5.v20120716</version>
-				<configuration>
-					<scanIntervalSeconds>0</scanIntervalSeconds>
-				</configuration>
-			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
