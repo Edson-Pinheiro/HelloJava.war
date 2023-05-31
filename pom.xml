@@ -19,6 +19,21 @@
 				<version>3.1.0</version>
 			</plugin>
 		</plugins>
+		
+		      <plugin>
+       				<groupId>org.apache.maven.plugins</groupId>
+        			<artifactId>maven-deploy-plugin</artifactId>
+        			<version>2.7</version>
+        				<configuration>
+          					<repositoryId>nexus</repositoryId>
+          					<url>http://192.168.15.31:8081/repository/maven-repo</url>
+          						<authentication>
+            							<username>admin</username>
+            							<password>admin</password>
+          						</authentication>
+       					</configuration>
+      </plugin>
+		
 	</build>
 	
 
