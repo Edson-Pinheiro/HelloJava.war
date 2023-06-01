@@ -12,6 +12,11 @@
            <repository>
            <id>nexus</id>
            <url>http://192.168.15.31:8081/repository/maven-repo2/</url>
+	  <releases>
+            <enabled>false</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
            </repository>
         </repositories>
 
