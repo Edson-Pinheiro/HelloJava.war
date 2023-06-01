@@ -11,7 +11,7 @@
 	<repositories>
            <repository>
            <id>nexus</id>
-           <url>http://192.168.15.31:8081/repository/maven-repository/</url>
+           <url>http://192.168.15.31:8081/repository/maven-rep/</url>
            </repository>
         </repositories>
 
@@ -32,7 +32,7 @@
         			<version>2.7</version>
         				<configuration>
           					<repositoryId>nexus</repositoryId>
-          					<url>http://192.168.15.31:8081/repository/maven-repo</url>
+          					<url>http://192.168.15.31:8081/repository/maven-rep</url>
           						<authentication>
             							<username>admin</username>
             							<password>admin</password>
