@@ -12,8 +12,7 @@
 		<%= new java.util.Date() %></p>
 	<p>
 		<!--You are coming from -->
-		<%= request.getRequestURI()  %>
-    		<%= request.getContextPath() %>
-		<%= request.getRemoteHost() %>
+		<%= new java.util.Calendar() %>
+    		
 	</p>
 </body>
