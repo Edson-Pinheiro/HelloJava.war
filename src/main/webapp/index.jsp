@@ -1,10 +1,15 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="pt-BR" xml:lang="pt-BR">
+
 <head>
-<title>HelloJava World!</title>
+	<title>HelloJava World!</title>
+	<meta content="text/html; charset=utf-8" />
 </head>
+
 <body>
 	<h1>
-		<span style="color: red;">Minha App em Java</span>
+		<span style="color: Blue;">Minha App em Java</span>
 	</h1>
 
 	<p>
