@@ -11,8 +11,8 @@
 		It is now
 		<%= new java.util.Date() %></p>
 	<p>
-		<!--You are coming from -->
-		<%= new java.util.Calendar() %>
+		<!-- Port this App in server -->
+		<%= request.getServerPort() %>
     		
 	</p>
 </body>
