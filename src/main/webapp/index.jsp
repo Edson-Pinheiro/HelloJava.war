@@ -5,11 +5,19 @@
 <head>
 	<title>HelloJava World!</title>
 	<meta content="text/html; charset=utf-8" />
+
+	<style>
+        .green-text {
+            color: limegreen;
+            text-align: center;
+        }
+	</style>
 </head>
 
 <body>
-	<h1>
-		<span style="color: Blue;">Minha App em Java</span>
+	<h1 class="green-text">
+		<!--<span style="color: Blue;">Minha App em Java</span>-->
+  		Minha App em Java
 	</h1>
 
 	<p>
