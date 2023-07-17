@@ -11,7 +11,7 @@
 		It is now
 		<%= new java.util.Date() %></p>
 	<p>
-		<!-- Port this App in server -->
+		 App Port this server in 
 		<%= request.getServerPort() %>
     		
 	</p>
