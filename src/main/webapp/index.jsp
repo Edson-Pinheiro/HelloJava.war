@@ -8,7 +8,7 @@
 
 	<style>
         .green-text {
-            color: limegreen;
+            color: DarkOrchid3;
             text-align: center;
         }
 	</style>
