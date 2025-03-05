@@ -30,11 +30,11 @@ jobs:
         docker build -t ghcr.io/${{ github.actor }}/hellojava:latest .
         docker push ghcr.io/${{ github.actor }}/hellojava:latest
 
-    - name: Configurar acesso ao Kubernetes
-      run: |
-        echo "${{ secrets.KUBECONFIG }}" | base64 -d > kubeconfig.yaml
-        export KUBECONFIG=kubeconfig.yaml
+  #  - name: Configurar acesso ao Kubernetes
+  #    run: |
+  #      echo "${{ secrets.KUBECONFIG }}" | base64 -d > kubeconfig.yaml
+  #      export KUBECONFIG=kubeconfig.yaml
 
-    - name: Atualizar Deployment no Kubernetes
-      run: |
-        kubectl set image deployment/hellojava hellojava=ghcr.io/${{ github.actor }}/hellojava:latest
+  #  - name: Atualizar Deployment no Kubernetes
+  #    run: |
+  #      kubectl set image deployment/hellojava hellojava=ghcr.io/${{ github.actor }}/hellojava:latest
