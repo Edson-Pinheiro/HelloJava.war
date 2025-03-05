@@ -3,7 +3,7 @@ name: CI/CD para Kubernetes
 on:
   push:
     branches:
-      - main  # Roda quando houver um push na branch main
+      - main  # Roda sempre que houver um push na branch main
 
 jobs:
   build-and-deploy:
@@ -13,13 +13,22 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v3
 
+    - name: Configurar Java e Maven
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
+    - name: Compilar projeto com Maven
+      run: mvn clean package -DskipTests
+
     - name: Login no GitHub Container Registry (GHCR)
       run: echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-    - name: Construir a imagem Docker
+    - name: Construir e enviar imagem Docker para o GHCR
       run: |
-        docker build -t ghcr.io/${{ github.actor }}/hellojava.war:latest .
-        docker push ghcr.io/${{ github.actor }}/hellojava.war:latest
+        docker build -t ghcr.io/${{ github.actor }}/hellojava:latest .
+        docker push ghcr.io/${{ github.actor }}/hellojava:latest
 
     - name: Configurar acesso ao Kubernetes
       run: |
@@ -28,4 +37,4 @@ jobs:
 
     - name: Atualizar Deployment no Kubernetes
       run: |
-        kubectl set image deployment/hellojava hellojava=ghcr.io/${{ github.actor }}/hellojava.war:latest
+        kubectl set image deployment/hellojava hellojava=ghcr.io/${{ github.actor }}/hellojava:latest
